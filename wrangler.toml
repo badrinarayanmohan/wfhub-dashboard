@@ -1,0 +1,19 @@
+name = "feedback-analyzer"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# D1 Database Binding (for local development, wrangler will use local SQLite)
+[[d1_databases]]
+binding = "DB"
+database_name = "feedback-db"
+database_id = "00000000-0000-0000-0000-000000000000" # Temporary - update after creating remote DB
+
+# Workers AI Binding
+[ai]
+binding = "AI"
+
+# KV for caching analysis results
+[[kv_namespaces]]
+binding = "CACHE"
+id = "00000000000000000000000000000000" # Temporary - update after creating remote KV
+preview_id = "00000000000000000000000000000000"
